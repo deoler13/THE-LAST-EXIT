@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Last Exit - Donut NFTs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- اضافه کردن Font Awesome -->
+  <style>
+    /* تنظیمات عمومی */
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: linear-gradient(45deg, #ff0000, #000000); /* ترکیب قرمز و مشکی */
+      background-size: 200% 200%;
+      animation: gradientMove 5s ease infinite;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      color: white;
+      position: relative; /* برای منوی همبرگری */
+    }
+
+    /* انیمیشن حرکت رنگ‌ها */
+    @keyframes gradientMove {
+      0% {
+        background-position: 0% 0%;
+      }
+      50% {
+        background-position: 100% 100%;
+      }
+      100% {
+        background-position: 0% 0%;
+      }
+    }
+
+    /* طراحی محتوا */
+    .container {
+      text-align: center;
+    }
+
+    /* انیمیشن برای حرکت متن‌ها به بالا و پایین */
+    @keyframes moveUpDown {
+      0% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px); /* حرکت به سمت بالا */
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+      animation: moveUpDown 3s ease-in-out infinite; /* انیمیشن حرکت بالا و پایین */
+    }
+
+    /* استایل برای آیکون‌ها */
+    .icons {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      animation: moveUpDown 3s ease-in-out infinite; /* انیمیشن برای آیکون‌ها */
+    }
+
+    .icon {
+      background-color: #ff0000; /* تغییر به قرمز */
+      padding: 15px 25px;
+      border-radius: 50px;
+      color: white;
+      font-size: 1.3em;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: transform 0.3s, background-color 0.3s;
+      text-decoration: none;
+    }
+
+    .icon:hover {
+      transform: scale(1.1);
+      background-color: #ff6f89;
+    }
+
+    .icon i {
+      margin-right: 10px;
+    }
+
+    /* استایل برای منوی همبرگری */
+    .menu {
+      display: none;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      flex-direction: column;
+      gap: 15px;
+      background-color: rgba(0, 0, 0, 0.7);
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2em;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: rgba(0, 0, 0, 0.6);
+      transition: background-color 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* استایل برای دکمه همبرگری */
+    .hamburger {
+      font-size: 2em;
+      cursor: pointer;
+      color: white;
+      background: none;
+      border: none;
+      z-index: 10;
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+
+    /* نمایش منوی همبرگری */
+    .menu-active {
+      display: flex;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- دکمه همبرگری در گوشه سمت راست بالای صفحه -->
+  <div class="hamburger" onclick="toggleMenu()">
+    <i class="fas fa-bars"></i>
+  </div>
+
+  <div class="container">
+    <h1>THE LAST EXIT</h1> <!-- تغییر عنوان به "THE LAST EXIT" -->
+
+    <!-- آیکون‌ها برای "Read Whitepaper" و "Buy Now" که همیشه نمایش داده می‌شوند -->
+    <div class="icons">
+      <a href="whitepaper.html" class="icon" title="Read Whitepaper">
+        <i class="fas fa-file-alt"></i> Read Whitepaper
+      </a>
+      <a href="https://opensea.io/collection/your-collection-id" class="icon" title="Buy Now">
+        <i class="fas fa-credit-card"></i> Buy Now
+      </a>
+    </div>
+  </div>
+
+  <!-- منوی همبرگری -->
+  <div class="menu" id="hamburgerMenu">
+    <a href="https://x.com/SVaezpoor94251?s=09" target="_blank">Twitter</a>
+    <a href="https://discord.com/invite/nCfyadU2" target="_blank">Discord</a>
+  </div>
+
+  <script>
+    // تابع برای نمایش و مخفی کردن منوی همبرگری
+    function toggleMenu() {
+      const menu = document.getElementById('hamburgerMenu');
+      menu.classList.toggle('menu-active');
+    }
+  </script>
+</body>
+</html>
