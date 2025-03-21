@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Whitepaper - The Last Exit</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: white;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 2.5em;
+      color: #ff4c4c;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeIn 1.5s forwards 0.5s;
+    }
+
+    p {
+      font-size: 1.2em;
+      line-height: 1.8;
+      margin-bottom: 20px;
+      opacity: 0;
+      transform: translateY(50px);
+      animation: fadeIn 1.5s forwards 1s;
+    }
+
+    .back-button {
+      display: block;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 1.5em;
+      color: #ff4c4c;
+      text-decoration: none;
+      padding: 10px 20px;
+      background-color: #1a1a1a;
+      border-radius: 30px;
+      transition: background-color 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #ff4c4c;
+      color: white;
+    }
+
+    /* Smooth fade-in effect */
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(50px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    /* Image fade-in effect */
+    .fade-image {
+      width: 100%;
+      height: auto;
+      opacity: 0;
+      transition: opacity 4s ease-in-out;
+    }
+
+    /* Trigger image fade-in once it's in view */
+    .fade-image.visible {
+      opacity: 1;
+    }
+
+    /* Smooth scroll effect */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Spacing for the emoji list */
+    ul {
+      padding-left: 20px;
+    }
+
+    ul li {
+      margin-bottom: 15px;
+      font-size: 1.2em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Whitepaper - The Last Exit</h1>
+
+    <p><strong>Introduction:</strong></p>
+    <p>In the modern world, where everything is changing rapidly, many of us are on a quest for a new goal or destination. In this context, <strong>THE LAST EXIT</strong> project offers a unique opportunity to embark on a new journey, a journey where you’ll not only experience an interactive story but also play a key role in making decisions at every stage of the adventure.</p>
+
+    <p><strong>Project Story:</strong></p>
+    <p><strong>Chapter One: The Start of the Journey</strong><br>
+    Imagine standing at a train station. Everything seems like a normal day, but deep inside, something feels off. You discover a letter. This letter is an invitation to a special and unique journey, a journey called "The Last Exit." The only thing you know is that the destination of this journey is unpredictable. No one knows where the final stop is.</p>
+
+    <p>At the beginning of the journey, you’ll face multiple decisions that will affect the path ahead. You must reach different stations, overcome various challenges, and eventually reach the final station, where the hidden truth awaits. But will you make it to the end?</p>
+
+    <p><strong>Project Features:</strong></p>
+    <ul>
+      <li><strong>Interactive and Dynamic Story:</strong> Every decision you make impacts the course of the journey and the events in the story. You may reach stations that others can’t access, based on the choices you make. This journey is yours, and only you can shape its narrative.</li>
+      <li><strong>Challenges and Rewards:</strong> At each station, you’ll face challenges. These challenges may be intellectual or require real-world tasks. At each stage, rewards await you, which you can use to advance in your journey or unlock new features.</li>
+      <li><strong>Multiple Endings:</strong> <strong>The Last Exit</strong> is designed in such a way that every player may encounter a different ending. Some may uncover the truth at the final station, while others may get lost along the way.</li>
+    </ul>
+
+    <p><strong>Pump.fun Element of the Project:</strong></p>
+    <p><strong>The Last Exit</strong> is an entertaining project where, in addition to the narrative challenges, there’s always a "Pump.fun" element involved. This means that at certain stages, unexpected and exciting events will occur, making the experience even more engaging. For example, a station may suddenly turn into a fantasy world, and you may find yourself becoming a hero! These unique features ensure that no two journeys are the same.</p>
+
+    <p><strong>Project Goal:</strong></p>
+    <p>The goal of <strong>The Last Exit</strong> is to take you to a new world where you are the decision-maker. This project not only offers you an interactive experience with captivating stories but also introduces you to the world of crypto and blockchain technology through digital tokens.</p>
+
+    <p><strong>Project Roadmap:</strong></p>
+    <ul>
+      <li><strong>Phase One: Launch and Introduction:</strong> Introduce the story and create the first stations. Distribute initial limited tokens to early users.</li>
+      <li><strong>Phase Two: Development and Adding New Stations:</strong> Add new challenges and rewards. Implement more interactive systems.</li>
+      <li><strong>Phase Three: Community Engagement and Contests:</strong> Host challenges and competitions in both the digital and real world. Distribute special tokens to active participants.</li>
+      <li><strong>Phase Four: Global Expansion of the Project:</strong> Collaborate with major projects and brands to create new stations. Expand the market for digital tokens to reach more users.</li>
+    </ul>
+
+    <p><strong>Conclusion:</strong></p>
+    <p><strong>The Last Exit</strong> is a unique storytelling experience that takes you into an exciting and one-of-a-kind world. By utilizing digital tokens, you not only embark on an engaging journey but also have the opportunity to invest in a smart way within the blockchain space. This journey reminds you that life is never linear, and at any moment, you might be led to a new and surprising destination.</p>
+
+    <a href="index.html" class="back-button">Back to Home</a>
+  </div>
+
+  <script>
+    // Image fade-in on scroll
+    const fadeImage = document.querySelector('.fade-image');
+    
+    window.addEventListener('scroll', () => {
+      if (fadeImage.getBoundingClientRect().top < window.innerHeight) {
+        fadeImage.classList.add('visible');
+      }
+    });
+  </script>
+</body>
+</html>
